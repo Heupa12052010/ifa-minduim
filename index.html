@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revista Eco Horizontes | Sustentabilidade & Futuro Verde</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ATALHO DE NAVEGAÇÃO RÁPIDA -->
+    <a href="#conteudo-principal" class="link-atalho">Ir para o conteúdo principal [Pressione Enter]</a>
+
+    <!-- BARRA DE FERRAMENTAS DE ACESSIBILIDADE FIXA -->
+    <nav class="barra-acessibilidade" aria-label="Controles de Acessibilidade">
+        <button id="btnAumentaTexto" class="botao-controle" aria-label="Aumentar o tamanho do texto">A+ Aumentar</button>
+        <button id="btnDiminuiTexto" class="botao-controle" aria-label="Diminuir o tamanho do texto">A- Diminuir</button>
+        <button id="btnContraste" class="botao-controle" aria-label="Alternar para modo de alto contraste" aria-pressed="false">🌓 Alto Contraste</button>
+        
+        <label for="seletorDaltonismo" class="sr-only">Selecione o filtro de daltonismo:</label>
+        <select id="seletorDaltonismo" class="botao-controle" aria-label="Simular visão com daltonismo">
+            <option value="nenhum">Visão Padrão</option>
+            <option value="deuteranopia">Deuteranopia (Verde)</option>
+            <option value="protanopia">Protanopia (Vermelho)</option>
+            <option value="tritanopia">Tritanopia (Azul)</option>
+        </select>
+        
+        <button id="btnVoz" class="botao-controle" aria-label="Ouvir o conteúdo da revista em voz alta">🔊 Ouvir Revista</button>
+        <button class="botao-controle" onclick="pararLeitura()" aria-label="Parar a leitura em voz alta">⏹️ Parar</button>
+    </nav>
+
+    <!-- CABEÇALHO DA REVISTA -->
+    <header class="header-revista" role="banner">
+        <div class="logo-container">
+            <span class="edicao-tag">Edição Global • Ecologia & Soluções Renováveis</span>
+            <h1>ECO <span>HORIZONTES</span></h1>
+            <p class="subtitulo">A ciência da conservação, a preservação de biomas e as tecnologias que movem o amanhã sustentável</p>
+        </div>
+    </header>
+
+    <!-- MENU DE NAVEGAÇÃO -->
+    <nav class="menu-categorias" aria-label="Categorias de artigos">
+        <ul>
+            <li><a href="#biologia-celular">Sustentabilidade Celular</a></li>
+            <li><a href="#biomas-brasileiros">Biomas em Risco</a></li>
+            <li><a href="#energia-limpa">Energias Limpas</a></li>
+            <li><a href="#economia-circular">Economia Circular</a></li>
+            <li><a href="#futuro-verde">Tecnologia & Florestas</a></li>
+            <li><button class="btn-emergencia" onclick="abrirModal()" aria-haspopup="dialog" aria-controls="modalAjuda">ALERTA AMBIENTAL</button></li>
+        </ul>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main id="conteudo-principal" tabindex="-1">
+        
+        <section class="artigo-destaque" aria-labelledby="titulo-capa">
+            <div class="destaque-texto">
+                <span class="categoria-badge">Matéria de Capa</span>
+                <h2 id="titulo-capa">A Corrida Tecnológica para Salvar a Biodiversidade do Planeta</h2>
+                <p>Descubra como cientistas e engenheiros estão unindo Inteligência Artificial, sensores IoT terrestres e biotecnologia avançada para monitorar ecossistemas e frear o colapso climático em tempo real.</p>
+            </div>
+        </section>
+
+        <hr class="divisor" aria-hidden="true">
+
+        <div class="artigos-grid">
+            
+            <!-- ARTIGO 1 -->
+            <article id="biologia-celular" class="card-artigo" tabindex="0">
+                <div class="card-tag">Biotecnologia</div>
+                <img src="img/f01.jpg" alt="Estruturas circulares de cloroplastos verdes em células vegetais sob lentes de microscópio." class="imagem-artigo">
+                <h3>1. A Eficiência da Sustentabilidade Celular</h3>
+                <p>Os organismos vivos utilizam mecanismos celulares perfeitos para reciclagem de energia:</p>
+                <ul>
+                    <li><strong>Cloroplastos:</strong> As usinas solares das plantas que realizam a fotossíntese transformando luz em oxigênio.</li>
+                    <li><strong>Mitocôndrias:</strong> Centrais celulares que geram energia limpa de forma otimizada para o metabolismo.</li>
+                    <li><strong>Autofagia Celular:</strong> O sistema natural de limpeza interna do organismo que recicla componentes velhos e evita o desperdício biológico.</li>
+                </ul>
+            </article>
+
+            <!-- ARTIGO 2 -->
+            <article id="biomas-brasileiros" class="card-artigo" tabindex="0">
+                <div class="card-tag">Conservação</div>
+                <img src="img/f02.jpg" alt="Extensa vegetação verde nativa e formações rochosas características de biomas brasileiros." class="imagem-artigo">
+                <h3>2. A Situação dos Nossos Grandes Biomas</h3>
+                <p>A riqueza ecológica do Brasil enfrenta desafios críticos de conservação e restoration natural:</p>
+                <ul>
+                    <li><strong>Amazônia:</strong> Regulação do clima global através dos rios voadores gerados pela evapotranspiração.</li>
+                    <li><strong>Cerrado:</strong> A caixa d'água do país, essencial para o abastecimento das bacias hidrográficas nacionais.</li>
+                    <li><strong>Mata Atlântica:</strong> Bioma altamente fragmentado com projetos intensivos de reflorestamento com mudas nativas.</li>
+                </ul>
+            </article>
+
+            <!-- ARTIGO 3 -->
+            <article id="energia-limpa" class="card-artigo destaque-biomas" tabindex="0">
+                <div class="card-tag">Matriz Energética</div>
+                <img src="img/f03.jpg" alt="Grandes painéis solares enfileirados em um campo ao lado de aerogeradores de energia eólica." class="imagem-artigo">
+                <h3>3. A Física por Trás das Energias Renováveis</h3>
+                <p>A transição energética global depende da conversão limpa e eficiente das forças da natureza:</p>
+                <ul>
+                    <li><strong>Energia Solar Fotovoltaica:</strong> Efeito físico onde fótons de luz deslocam elétrons em placas de silício para gerar corrente elétrica.</li>
+                    <li><strong>Energia Eólica:</strong> Conversão da energia cinética dos ventos em energia mecânica pelas pás das turbinas de grande porte.</li>
+                    <li><strong>Biomassa e Hidrogênio Verde:</strong> Uso de resíduos orgânicos e quebra da molécula de água por eletrólise limpa sem emissão de carbono.</li>
+                </ul>
+            </article>
+
+            <!-- ARTIGO 4 -->
+            <article id="economia-circular" class="card-artigo" tabindex="0">
+                <div class="card-tag">Sustentabilidade Urbana</div>
+                <img src="img/f04.jpg" alt="Símbolo de reciclagem estilizado feito com materiais biodegradáveis e folhas verdes de plantas." class="imagem-artigo">
+                <h3>4. Economia Circular: Redefinindo o Lixo</h3>
+                <p>Diferente do modelo linear de extrair, produzir e descartar, a economia circular propõe que todo resíduo seja reinserido na cadeia produtiva. Produtos são desenhados para fácil reparo, desmontagem e reciclagem completa.</p>
+            </article>
+
+            <!-- ARTIGO 5 -->
+            <article id="futuro-verde" class="card-artigo destaque-futuro" tabindex="0">
+                <div class="card-tag">Inovação Verde</div>
+                <img src="img/f05.jpg" alt="Mão segurando um smartphone que exibe gráficos digitais de monitoramento de florestas." class="imagem-artigo">
+                <h3>5. IA, Satélites e Algoritmos de Proteção Ambiental</h3>
+                <p>A engenharia de dados e a robótica agora servem ativamente como ferramentas de combate à degradação ambiental:</p>
+                <ul>
+                    <li><strong>Visão Computacional:</strong> Detecção imediata de focos de incêndio e desmatamento ilegal por imagens de satélite.</li>
+                </ul>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- JANELA MODAL ACESSÍVEL -->
+    <div id="modalAjuda" class="modal-overlay" hidden>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+            <h2 id="modal-titulo">⚠️ ALERTA AMBIENTAL ATIVO</h2>
+            <p>Este painel simula relatórios de desmatamento e níveis críticos dos reservatórios em tempo real para fins educativos de conservação ambiental.</p>
+            <button id="btnFecharModal" class="btn-fechar" onclick="fecharModal()">Entendi e Fechar</button>
+        </div>
+    </div>
+
+    <!-- RODAPÉ DA REVISTA -->
+    <footer class="rodape" role="contentinfo">
+        <p>&copy; 2026 Revista Eco Horizontes. Conteúdo focado em acessibilidade web e sustentabilidade.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
